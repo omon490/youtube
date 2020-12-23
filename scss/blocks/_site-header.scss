@@ -1,0 +1,128 @@
+
+.site-header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 15px 25px;
+  background-color: #fff;
+}
+
+.site-header__toggler {
+  width: 20px;
+  height: 17px;
+  display: inline-block;
+  position: relative;
+  z-index: 20;
+  margin-right: 28px;
+  border: none;
+  background-image: url("../../img/menu-burger.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.site-header__form {
+  position: relative;
+  z-index: 1;
+  max-width: 45%;
+  flex-grow: 1;
+}
+
+.site-header__input {
+  width: 100%;
+  padding: 13px 17px 12px 23px;
+  border-radius: 22px;
+  border: none;
+  outline: none;
+  opacity: 0.3;
+  background-color: #EBEBEB;
+
+  &:focus {
+    opacity: 0.6;
+  }
+}
+
+.site-header__search-button {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  right: 23px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  outline: none;
+  transform: translateY(-50%);
+  background-image: url("../../img/search-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: transparent;
+}
+
+.site-header__list {
+  @include reset-list;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: auto;
+}
+
+.site-header__item {
+  position: relative;
+  z-index: 1;
+  margin-left: 40px;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}
+
+.site-header__item-button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.site-header__item-button--videos {
+  background-image: url("../../img/movie-icon.svg");
+  background-size: 27px 20px;
+}
+
+.site-header__item-button--service {
+  background-image: url("../../img/service-icon.svg");
+  background-size: 21px 21px;
+}
+
+.site-header__item-button--notify {
+  background-image: url("../../img/notify-icon.svg");
+  background-size: 22px 26px;
+}
+.site-header__item-button--avatar {
+  background-image: url("../../img/avatar-icon/Userpic.png");
+  background-size: contain;
+  border-radius: 50%;
+}
+
+.site-header__item-span {
+  position: absolute;
+  left: 18px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  font-size: 10px;
+  color: #fff;
+  background-color: red;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
