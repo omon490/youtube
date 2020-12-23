@@ -3,10 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-  <title>Стартовый шаблон</title>
+  <title>You Tube</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+
+<body class="page-body page-body--open">
+<!-- SITE-HEADER -->
+<header class="site-header">
+  <button class="site-header__toggler" type="button"></button>
+  <a class="logo" href="index.html">
+    <img class="logo__img" src="img/youtube-logo.svg" alt="you tube logo" width="116" height="25">
+  </a>
+  <form class="site-header__form js-site-header__form" action="https://echo.htmlacademy.ru" method="POST" aria-label="search form">
+    <input class="site-header__input js-site-header__input" type="search" name="search" placeholder="Search">
+    <button class="site-header__search-button js-site-header__search-button"></button>
+  </form>
+
+  <ul class="site-header__list">
+    <li class="site-header__item">
+      <button class="site-header__item-button site-header__item-button--videos" type="button"></button>
+    </li>
+    <li class="site-header__item">
+      <button class="site-header__item-button site-header__item-button--service" type="button"></button>
+    </li>
+    <li class="site-header__item">
+      <button class="site-header__item-button site-header__item-button--notify" type="button"></button>
+    </li>
+    <li class="site-header__item">
+      <button class="site-header__item-button site-header__item-button--avatar" type="button"></button>
+    </li>
+  </ul>
+</header>
+
+
 
 </body>
 </html>
