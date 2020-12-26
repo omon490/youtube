@@ -1,0 +1,221 @@
+
+.menu-bar {
+  // display: none;
+  width: 250px;
+  height: 100%;
+  margin-bottom: 40px;
+  padding: 40px 20px 60px 20px;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.menu-bar__top-list {
+  @include reset-list;
+  margin-bottom: 60px;
+}
+
+.menu-bar__item {
+  margin-bottom: 28px;
+}
+
+.menu-bar__link {
+  color: $primary-text-color;
+  display: flex;
+  align-items: center;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    margin-right: 10px;
+  }
+}
+
+.menu-bar__link--home {
+  &::before {
+    background-image: url("../../img/home-icon.svg");
+  }
+}
+.menu-bar__link--trending {
+  &::before {
+    background-image: url("../../img/trending.svg");
+  }
+}
+.menu-bar__link--subs {
+  &::before {
+    background-image: url("../../img/subs.svg");
+  }
+}
+
+.menu-bar__mid-list {
+  @include reset-list;
+  margin-bottom: 58px;
+}
+
+.menu-bar__mid-item {
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-bar__mid-link {
+  display: flex;
+  align-items: center;
+  color: $primary-text-color;
+  transition: color 0.3s ease;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+  }
+
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+.menu-bar__mid-link--library {
+  &::before {
+    background-image: url("../../img/library.svg");
+  }
+}
+.menu-bar__mid-link--history {
+  &::before {
+    background-image: url("../../img/history.svg");
+  }
+}
+.menu-bar__mid-link--watch {
+  &::before {
+    background-image: url("../../img/watch.svg");
+  }
+}
+.menu-bar__mid-link--favourites {
+  &::before {
+    background-image: url("../../img/favourites.svg");
+  }
+}
+.menu-bar__mid-link--liked {
+  &::before {
+    background-image: url("../../img/liked.svg");
+  }
+}
+.menu-bar__mid-link--music {
+  &::before {
+    background-image: url("../../img/music.svg");
+  }
+}
+.menu-bar__mid-link--games {
+  &::before {
+    background-image: url("../../img/games.svg");
+  }
+}
+
+.menu-bar__mid-item--show {
+}
+
+.menu-bar__mid-button {
+  border: none;
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  background-image: url("../../img/array-down.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.menu-bar__mid-link--show {
+  &::before {
+    contain: "";
+    width: 1px;
+    height: 1px;
+  }
+}
+
+.menu-bar__bottom-wrapper {
+  margin-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+.menu-bar__heading {
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23px;
+  color: $primary-heading-color;
+}
+
+.menu-bar__bottom-list {
+  @include reset-list;
+  margin-bottom: 105px;
+}
+
+.menu-bar__bottom-item {
+  margin-bottom: 23px;
+}
+
+.menu-bar__bottom-link {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 20px;
+  color: $primary-text-color;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: $hover-color;
+  }
+}
+
+.menu-bar__bottom-link:nth-child(1) {
+  &::before {
+    content: "";
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    margin-right: 10px;
+    background-image: url("../../img/sub-img-1/img-1.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+}
+
+.menu-bar__bottom-link:nth-child(2) {
+  &::before {
+    content: "";
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    margin-right: 10px;
+    background-image: url("../../img/sub-img-2/img-2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+}
+
+.menu-bar__bottom-wrapper-link {
+  display: flex;
+  align-items: center;
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    background-image: url("../../img/setting-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+}
