@@ -127,3 +127,55 @@
   border: 2px solid #fff;
   line-height: 17px;
 }
+
+@include breakpoint-down (870) {
+  .site-header__item {
+    margin-left: 10px;
+  }
+}
+
+@include breakpoint-down (710) {
+  .site-header__toggler {
+    margin-right: 10px;
+  }
+
+  .site-header__item {
+    margin-left: 5px;
+  }
+}
+
+@include breakpoint-down (645) {
+  .site-header__form {
+    max-width: 100%;
+  }
+
+  .site-header__list {
+    width: 50px;
+  }
+
+  .site-header__input {
+    background-color: #fff;
+  }
+
+  .site-header__input::placeholder {
+    font-size: 0;
+  }
+
+  .site-header__item:first-child {
+    display: none;
+  }
+
+  .site-header__item:nth-child(2) {
+    display: none;
+  }
+
+  .site-header__item:nth-child(3) {
+    display: none;
+  }
+}
+
+@include breakpoint-down (500) {
+  .site-header__toggler {
+    display: none;
+  }
+}

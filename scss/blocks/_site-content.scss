@@ -1,0 +1,107 @@
+
+.site-content {
+  padding-top: 40px;
+  width: 85%;
+  flex-grow: 1;
+  height: fit-content;
+  overflow-x: hidden;
+}
+
+.site-content__wrapper {
+
+}
+
+.site-content__name {
+  margin: 0;
+  margin-bottom: 38px;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 33px;
+  color: $secondary-heading-color;
+
+  &::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    background-image: url("../../img/dolli/dolli.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+}
+
+.site-content__videos-list {
+  @include reset-list;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.site-content__videos-item {
+  width: 250px;
+  margin-right: 40px;
+  flex-shrink: 0;
+}
+
+.site-content__videos-link {
+  display: inline-block;
+  width: 100%;
+}
+
+.site-content__inner-box {
+  position: relative;
+  z-index: 1;
+}
+
+.site-content__inner-img {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.site-content__inner-time {
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  right: 10px;
+  padding: 3px 9px;
+  border-radius: 12px;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: right;
+  color: $white;
+  opacity: 0.3;
+  background-color: $primary-heading-color;
+}
+
+.site-content__videos-title {
+  margin: 0;
+  margin-bottom: 4px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  color: $secondary-heading-color;
+}
+
+.site-content__info-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.site-content__info-views {
+  margin: 0;
+  font-size: 13px;
+  line-height: 16px;
+  color: $secondary-text-color;
+}
+.site-content__info-creator {
+  margin: 0;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: right;
+  color: $secondary-text-color;
+}

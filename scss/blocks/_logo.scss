@@ -9,6 +9,18 @@
   height: 25px;
 }
 
+@include breakpoint-down (985) {
+  .logo {
+    margin-right: 20px;
+  }
+}
+
+@include breakpoint-down (900) {
+  .logo {
+    margin-right: 10px;
+  }
+}
+
 @include breakpoint-down (600) {
   .logo {
     margin-right: auto;
