@@ -1,5 +1,8 @@
 .page-body {
+  overflow: hidden;
+  height: 100vh;
 }
+
 .page-body--open .menu-bar{
   display: flex;
 }
