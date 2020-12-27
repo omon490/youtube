@@ -384,7 +384,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   height: 100%;
-  font-family: "Mulish", "Arial" sans-serif;
+  font-family: "Mulish", "Arial", sans-serif;
   font-style: normal;
   font-size: 16px;
   line-height: 20px;
@@ -1144,5 +1144,57 @@ img {
   line-height: 15px;
   text-align: right;
   color: #C2C2C2;
+}
+
+.site-content__other-top-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+}
+
+.site-content__other-heading {
+  margin: 0;
+  margin-bottom: 5px;
+  margin-right: 19px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 33px;
+  color: #19202C;
+}
+
+.site-content__other-heading::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  display: block;
+  background-image: url("../../img/food/food.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.site-content__other-text {
+  margin: 0;
+  margin-right: 600px;
+  color: #C2C2C2;
+}
+
+.site-content__subscribe-button {
+  border: none;
+  border-radius: 20px;
+  padding: 10px 20px;
+  background-color: #FF0000;
+  color: #fff;
 }
 /*# sourceMappingURL=styles.css.map */
