@@ -1225,7 +1225,7 @@ img {
 
 .site-content__other-text {
   margin: 0;
-  margin-right: 600px;
+  margin-right: auto;
   color: #C2C2C2;
 }
 
@@ -1235,6 +1235,12 @@ img {
   padding: 10px 20px;
   background-color: #FF0000;
   color: #fff;
+}
+
+@media only screen and (max-width: 660px) {
+  .site-content__subscribe-button {
+    display: none;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -1260,6 +1266,15 @@ img {
     margin-bottom: 30px;
     -ms-flex-negative: 1;
         flex-shrink: 1;
+  }
+  .site-content__other-top-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
