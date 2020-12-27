@@ -6,7 +6,7 @@
   flex-grow: 1;
   height: fit-content;
   overflow-x: hidden;
-
+  // scroll kodi
   &::-webkit-scrollbar {
     width: 0;
   }
@@ -37,7 +37,7 @@
     width: 50px;
     height: 50px;
     margin-right: 20px;
-    background-image: url("../../img/dolli/dolli.png");
+    background-image: url("../img/dolli/dolli.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -116,10 +116,6 @@
   line-height: 16px;
   text-align: right;
   color: $secondary-text-color;
-}
-
-.site-content__recommend {
-
 }
 
 .site-content__recommend-heading {
@@ -225,7 +221,7 @@
     height: 50px;
     margin-right: 20px;
     display: inline-block;
-    background-image: url("../../img/food/food.png");
+    background-image: url("../img/food/food.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -284,5 +280,19 @@
   .site-content__other-top-box {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@include retina-bg {
+  .site-content__name {
+    &::before {
+      background-image: url("../img/dolli/dolli@2x.png");
+    }
+  }
+
+  .site-content__other-heading {
+    &::before {
+      background-image: url("../img/food/food@2x.png");
+    }
   }
 }
