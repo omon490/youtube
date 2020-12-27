@@ -6,6 +6,20 @@
   flex-grow: 1;
   height: fit-content;
   overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 0;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 0;
+  }
 }
 
 .site-content__name {
@@ -210,7 +224,7 @@
     width: 50px;
     height: 50px;
     margin-right: 20px;
-    display: block;
+    display: inline-block;
     background-image: url("../../img/food/food.png");
     background-repeat: no-repeat;
     background-position: center center;
@@ -230,4 +244,26 @@
   padding: 10px 20px;
   background-color: $hover-color;
   color: $white;
+}
+
+@include breakpoint-down (500) {
+  .site-content {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .site-content__videos-list,
+  .site-content__recommend-list {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .site-content__videos-item,
+  .site-content__recommend-item{
+    margin-right: 0;
+    width: 100%;
+    margin-bottom: 30px;
+    flex-shrink: 1;
+  }
 }

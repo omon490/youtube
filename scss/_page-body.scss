@@ -6,3 +6,9 @@
 .page-body--open .menu-bar{
   display: none;
 }
+
+@include breakpoint-down (826) {
+  .page-body--open .menu-bar{
+    display: block;
+  }
+}
