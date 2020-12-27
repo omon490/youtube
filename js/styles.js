@@ -22,7 +22,6 @@ var createElement = function (element, elementClass, text) {
 };}
 // Function
 
-
 var elMenuToggler = $_(`.js-site-header__toggler`);
 var elMenu = $_(`.page-body`);
 var elMenuOpen = $_(`.page-body--open`);
@@ -165,21 +164,19 @@ var elOtherFragment = document.createDocumentFragment();
   elVideos.forEach(function (video) {
     // elVideosItem nomli o'zgaruvchiga har biridan original qolipdan nusxa ko'chiramiz
   var elVideosItem = elVideosTemplate.cloneNode(true);
-
   // endi shu qolipning ichidan o'zgarishi kerak bo'lgan elementlarni topib olamiz, va ularning textContenti yoki o'zgarishi kerak bo'lgan atributlarini har bir arrayning ichidagi obyektlarga tenglab chiqamiz
   $_(`.js-site-content__inner-img`, elVideosItem).src = video.videoImage;
   $_(`.js-site-content__inner-time`, elVideosItem).textContent = video.videoTime;
   $_(`.js-site-content__videos-title`, elVideosItem).textContent = video.videoTitle;
   $_(`.js-site-content__info-views`, elVideosItem).textContent = video.videoViews;
-
   // yuqoridagi fragmentga shu original qolipning nusxasini bolalari sifatida qo'shib qo'yamiz
   elVideosFragment.appendChild(elVideosItem);
 });
 // va htmlda mavjud bo'lgan ulga fragmentni bolalari sifatida qo'shib qo'yamiz
 (elVideosList).appendChild(elVideosFragment);
 
+// RECOMMEND
 elRecommendVideo.forEach(function (recommend) {
-
   var elRecommendItem = elRecommendTemplate.cloneNode(true);
 
   $_(`.js-site-content__recommend-inner-img`, elRecommendItem).src = recommend.videoRecImage;
@@ -189,8 +186,10 @@ elRecommendVideo.forEach(function (recommend) {
 
   elRecommendFragment.appendChild(elRecommendItem);
 });
+
 (elRecommendList).appendChild(elRecommendFragment);
 
+// OTHERVIDEOS
 elOtherVideos.forEach(function(other) {
   var elOtherItem = elOtherTemplate.cloneNode(true);
 
@@ -201,6 +200,7 @@ elOtherVideos.forEach(function(other) {
 
   elOtherFragment.appendChild(elOtherItem);
 });
+
 (elOtherList).appendChild(elOtherFragment);
 
 
