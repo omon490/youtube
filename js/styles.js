@@ -96,7 +96,7 @@ var elRecommendVideo = [
   },
   {
     videoRecTitle: `Moon Gazing`,
-    videoRecImage: `img/recommend-img-3/recommend-img-3.png`,
+    videoRecImage: `img/recommend-img-2/recommend-img-2.png`,
     videoRecViews: `125k views  ·  4 months ago`,
     videoRecAutor: `Dollie Blair`,
     videoRecTime: `2:12`
