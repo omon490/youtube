@@ -258,19 +258,27 @@
     padding-right: 20px;
   }
 
+  .site-content__other {
+    padding-bottom: 40px;
+  }
+
   .site-content__videos-list,
   .site-content__recommend-list {
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
   }
 
   .site-content__videos-item,
   .site-content__recommend-item{
     margin-right: 0;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     flex-shrink: 1;
+  }
+
+  .site-content__name {
+    margin-bottom: 15px;
   }
 
   .site-content__other-top-box {
