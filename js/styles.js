@@ -27,23 +27,10 @@ var createElement = function (element, elementClass, text) {
 
 
 var elMenuToggler = $_(`.js-site-header__toggler`);
-// var elModalToggler = $_('.menu-burger');
-// var elModal = document.querySelector('.main-body');
-// var elModalClose = document.querySelector('.main-body--open');
-// var elModalOpen = document.querySelector('.menu-burger--close');
+var elMenu = $_(`.page-body`);
+var elMenuOpen = $_(`.page-body--open`);
 
-// var elForm = document.querySelector('.header-form');
-// var elFormOpen = document.querySelector('.header-form--open');
-// var elFormOpenToggler = document.querySelector('.header-form__search-btn');
-
-
-// elFormOpenToggler.addEventListener('click', function () {
-//   elForm.classList.toggle('header-form--open');
-// });
-
-// elModalToggler.addEventListener('click', function () {
-//   elModal.classList.toggle('main-body--open');
-// });
-// elModalOpen.addEventListener('click', function () {
-//   elModal.classList.remove('main-body--open');
-// });
+elMenuToggler.addEventListener(`click`, function () {
+  // console.log(`ishladi`);
+  elMenu.classList.toggle(`page-body--open`);
+});
