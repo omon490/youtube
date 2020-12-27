@@ -3,6 +3,7 @@
   margin-right: 60px;
   min-width: 116px;
 }
+
 .logo__img {
   display: block;
   width: 116px;
@@ -21,7 +22,7 @@
   }
 }
 
-@include breakpoint-down (600) {
+@include breakpoint-down (500) {
   .logo {
     margin-right: auto;
     flex-grow: 1;
