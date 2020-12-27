@@ -103,15 +103,63 @@ var elRecommendVideo = [
   },
 ];
 
+var elOtherVideos = [
+  {
+    otherVideoTitle: `Astronomy Or Astrology`,
+    otherVideoImage: `img/food-img-1/food-img-1.png`,
+    otherVideoViews: `240k views  ·  4 months ago`,
+    otherVideoAutor: `Food & Drink`,
+    otherVideoTime: `7:36`
+  },
+  {
+    otherVideoTitle: `Advertising Outdoors`,
+    otherVideoImage: `img/food-img-2/food-img-2.png`,
+    otherVideoViews: `13k views  ·  15 days ago`,
+    otherVideoAutor: `Food & Drink`,
+    otherVideoTime: `2:19`
+  },
+  {
+    otherVideoTitle: `Radio Astronomy`,
+    otherVideoImage: `img/food-img-1/food-img-1.png`,
+    otherVideoViews: `1k views  ·  11 months ago`,
+    otherVideoAutor: `Food & Drink`,
+    otherVideoTime: `9:05`
+  },
+  {
+    otherVideoTitle: `A Good Autoresponder`,
+    otherVideoImage: `img/food-img-4/food-img-4.png`,
+    otherVideoViews: `45k views  ·  2 months ago`,
+    otherVideoAutor: `Food & Drink`,
+    otherVideoTime: `3:40`
+  },
+  {
+    otherVideoTitle: `Baby Monitor Technology`,
+    otherVideoImage: `img/food-img-2/food-img-2.png`,
+    otherVideoViews: `86k views  ·  7 days ago`,
+    otherVideoAutor: `Food & Drink`,
+    otherVideoTime: `1:56`
+  },
+  {
+    otherVideoTitle: `Asteroids`,
+    otherVideoImage: `img/food-img-2/food-img-2.png`,
+    otherVideoViews: `123k views  ·  4 months ago`,
+    otherVideoAutor: `Dollie Blair`,
+    otherVideoTime: `4:28`
+  },
+];
+
 // elVideosList nomli o'zgaruvchi ochib uni documentdan topib olamiz
 var elVideosList = $_(`.js-videos-list-group`);
 var elRecommendList = $_(`.js-recommend-list`);
+var elOtherList = $_(`.js-site-content__other-list`);
 // elVideosTemplate nomli o'zgaruvchiga templetening qayerda turganligini topib uni shunga tenglab qo'yamiz
 var elVideosTemplate = $_(`.site-content__videos-template`).content;
 var elRecommendTemplate = $_(`.site-content__recommend-template`).content;
+var elOtherTemplate = $_(`.site-content__other-template`).content;
 // elVideosFragment nomli fragment ochib olamiz bu bizga ma'lumotlarni bittada ko'rsatishga kerak bo'ladi
 var elVideosFragment = document.createDocumentFragment();
 var elRecommendFragment = document.createDocumentFragment();
+var elOtherFragment = document.createDocumentFragment();
 
 // endi elVideos nomli arrayni forEachda aylanib chiqamiz
   elVideos.forEach(function (video) {
@@ -142,6 +190,18 @@ elRecommendVideo.forEach(function (recommend) {
   elRecommendFragment.appendChild(elRecommendItem);
 });
 (elRecommendList).appendChild(elRecommendFragment);
+
+elOtherVideos.forEach(function(other) {
+  var elOtherItem = elOtherTemplate.cloneNode(true);
+
+  $_(`.js-site-content__other-img`, elOtherItem).src = other.otherVideoImage;
+  $_(`.js-site-content__other-time`, elOtherItem).textContent = other.otherVideoTime;
+  $_(`.js-site-content__other-title`, elOtherItem).textContent = other.otherVideoTitle;
+  $_(`.js-site-content__other-views`, elOtherItem).textContent = other.otherVideoViews;
+
+  elOtherFragment.appendChild(elOtherItem);
+});
+(elOtherList).appendChild(elOtherFragment);
 
 
 
