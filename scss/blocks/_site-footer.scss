@@ -21,13 +21,16 @@
   color: $primary-text-color;
   font-size: 14px;
   line-height: 13px;
+
   &:active {
     color: $hover-color;
     opacity: 0.7;
   }
+
   &:hover {
     color: $hover-color;
   }
+
   &:hover .site-footer__svg-img path {
     fill: $hover-color;
     opacity: 1;
