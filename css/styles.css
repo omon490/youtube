@@ -1035,6 +1035,17 @@ img {
   background-size: contain;
 }
 
+.site-content__watch-later-title::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  background-image: url("../../img/watch.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
 .site-content__videos-list {
   padding: 0;
   margin: 0;
@@ -1055,6 +1066,10 @@ img {
 .site-content__videos-link {
   display: inline-block;
   width: 100%;
+}
+
+.site-content__videos-link:hover .watch-later {
+  opacity: 1;
 }
 
 .site-content__inner-box {
@@ -1150,6 +1165,10 @@ img {
 .site-content__recommend-link {
   width: 100%;
   display: inline-block;
+}
+
+.site-content__recommend-link:hover .watch-later {
+  opacity: 1;
 }
 
 .site-content__recommend-inner-box {
@@ -1319,6 +1338,23 @@ img {
   .site-content__other-heading::before {
     background-image: url("../img/food/food@2x.png");
   }
+}
+
+.watch-later {
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  right: 10px;
+  width: 20px;
+  height: 20px;
+  border: none;
+  display: block;
+  background-color: transparent;
+  background-image: url("../../img/clock-icon.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  opacity: 0;
 }
 
 .site-footer__list {

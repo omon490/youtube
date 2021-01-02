@@ -44,6 +44,19 @@
   }
 }
 
+.site-content__watch-later-title {
+  &::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    background-image: url("../../img/watch.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+  }
+}
+
 .site-content__videos-list {
   @include reset-list;
   display: flex;
@@ -59,6 +72,10 @@
 .site-content__videos-link {
   display: inline-block;
   width: 100%;
+
+  &:hover .watch-later{
+    opacity: 1;
+  }
 }
 
 .site-content__inner-box {
@@ -142,6 +159,10 @@
 .site-content__recommend-link {
   width: 100%;
   display: inline-block;
+
+  &:hover .watch-later{
+    opacity: 1;
+  }
 }
 
 .site-content__recommend-inner-box {

@@ -39,42 +39,48 @@ var elVideos = [
     videoImage: `img/video-img-1/video-img-1.png`,
     videoViews: `80k views  ·  3 days ago`,
     videoAutor: `Dollie Blair`,
-    videoTime: `4:15`
+    videoTime: `4:15`,
+    videoId: `d001`
   },
   {
     videoTitle: `Selecting The Right Hotel`,
     videoImage: `img/video-img-2/video-img-2.png`,
     videoViews: `123k views  ·  1 months ago`,
     videoAutor: `Dollie Blair`,
-    videoTime: `8:00`
+    videoTime: `8:00`,
+    videoId: `d002`
   },
   {
     videoTitle: `Asteroids`,
     videoImage: `img/video-img-3/video-img-3.png`,
     videoViews: `43k views  ·  12 days ago`,
     videoAutor: `Dollie Blair`,
-    videoTime: `5:32`
+    videoTime: `5:32`,
+    videoId: `d003`
   },
   {
     videoTitle: `Telescopes 101`,
     videoImage: `img/video-img-4/video-img-4.png`,
     videoViews: `11k views  ·  6 months ago`,
     videoAutor: `Dollie Blair`,
-    videoTime: `6:40`
+    videoTime: `6:40`,
+    videoId: `d004`
   },
   {
     videoTitle: `Medical Care Is Just`,
     videoImage: `img/video-img-5/video-img-5.png`,
     videoViews: `18k views  ·  2 days ago`,
     videoAutor: `Dollie Blair`,
-    videoTime: `1:45`
+    videoTime: `1:45`,
+    videoId: `d005`
   },
   {
     videoTitle: `Moon Gazing`,
     videoImage: `img/video-img-6/video-img-6.png`,
     videoViews: `67k views  ·  4 months ago`,
     videoAutor: `Dollie Blair`,
-    videoTime: `1:45`
+    videoTime: `1:45`,
+    videoId: `d006`
   },
 ];
 
@@ -84,21 +90,24 @@ var elRecommendVideo = [
     videoRecImage: `img/recommend-img-1/recommend-img-1.png`,
     videoRecViews: `34k views  ·  5 months ago`,
     videoRecAutor: `Gussie French`,
-    videoRecTime: `3:40`
+    videoRecTime: `3:40`,
+    videoRecId: `w001`
   },
   {
     videoRecTitle: `Moon Gazing`,
     videoRecImage: `img/recommend-img-2/recommend-img-2.png`,
     videoRecViews: `54k views  ·  11 months ago`,
     videoRecAutor: `Edward Osborne`,
-    videoRecTime: `2:12`
+    videoRecTime: `2:12`,
+    videoRecId: `w002`
   },
   {
     videoRecTitle: `Moon Gazing`,
     videoRecImage: `img/recommend-img-2/recommend-img-2.png`,
     videoRecViews: `125k views  ·  4 months ago`,
     videoRecAutor: `Dollie Blair`,
-    videoRecTime: `2:12`
+    videoRecTime: `2:12`,
+    videoRecId: `w003`
   },
 ];
 
@@ -108,44 +117,52 @@ var elOtherVideos = [
     otherVideoImage: `img/food-img-1/food-img-1.png`,
     otherVideoViews: `240k views  ·  4 months ago`,
     otherVideoAutor: `Food & Drink`,
-    otherVideoTime: `7:36`
+    otherVideoTime: `7:36`,
+    otherVideoId: `r001`
   },
   {
     otherVideoTitle: `Advertising Outdoors`,
     otherVideoImage: `img/food-img-2/food-img-2.png`,
     otherVideoViews: `13k views  ·  15 days ago`,
     otherVideoAutor: `Food & Drink`,
-    otherVideoTime: `2:19`
+    otherVideoTime: `2:19`,
+    otherVideoId: `r002`
   },
   {
     otherVideoTitle: `Radio Astronomy`,
     otherVideoImage: `img/food-img-1/food-img-1.png`,
     otherVideoViews: `1k views  ·  11 months ago`,
     otherVideoAutor: `Food & Drink`,
-    otherVideoTime: `9:05`
+    otherVideoTime: `9:05`,
+    otherVideoId: `r003`
   },
   {
     otherVideoTitle: `A Good Autoresponder`,
     otherVideoImage: `img/food-img-4/food-img-4.png`,
     otherVideoViews: `45k views  ·  2 months ago`,
     otherVideoAutor: `Food & Drink`,
-    otherVideoTime: `3:40`
+    otherVideoTime: `3:40`,
+    otherVideoId: `r004`
   },
   {
     otherVideoTitle: `Baby Monitor Technology`,
     otherVideoImage: `img/food-img-2/food-img-2.png`,
     otherVideoViews: `86k views  ·  7 days ago`,
     otherVideoAutor: `Food & Drink`,
-    otherVideoTime: `1:56`
+    otherVideoTime: `1:56`,
+    otherVideoId: `r005`
   },
   {
     otherVideoTitle: `Asteroids`,
     otherVideoImage: `img/food-img-2/food-img-2.png`,
     otherVideoViews: `123k views  ·  4 months ago`,
     otherVideoAutor: `Dollie Blair`,
-    otherVideoTime: `4:28`
+    otherVideoTime: `4:28`,
+    otherVideoId: `r006`
   },
 ];
+
+var elWatchLater = [];
 
 // elVideosList nomli o'zgaruvchi ochib uni documentdan topib olamiz
 var elVideosList = $_(`.js-videos-list-group`);
@@ -161,7 +178,7 @@ var elRecommendFragment = document.createDocumentFragment();
 var elOtherFragment = document.createDocumentFragment();
 
 // endi elVideos nomli arrayni forEachda aylanib chiqamiz
-  elVideos.forEach(function (video) {
+  elVideos.forEach(function (video, index) {
     // elVideosItem nomli o'zgaruvchiga har biridan original qolipdan nusxa ko'chiramiz
   var elVideosItem = elVideosTemplate.cloneNode(true);
   // endi shu qolipning ichidan o'zgarishi kerak bo'lgan elementlarni topib olamiz, va ularning textContenti yoki o'zgarishi kerak bo'lgan atributlarini har bir arrayning ichidagi obyektlarga tenglab chiqamiz
@@ -169,20 +186,23 @@ var elOtherFragment = document.createDocumentFragment();
   $_(`.js-site-content__inner-time`, elVideosItem).textContent = video.videoTime;
   $_(`.js-site-content__videos-title`, elVideosItem).textContent = video.videoTitle;
   $_(`.js-site-content__info-views`, elVideosItem).textContent = video.videoViews;
+  $_(`.watch-later`, elVideosItem).dataset.videoId = index;
   // yuqoridagi fragmentga shu original qolipning nusxasini bolalari sifatida qo'shib qo'yamiz
   elVideosFragment.appendChild(elVideosItem);
 });
 // va htmlda mavjud bo'lgan ulga fragmentni bolalari sifatida qo'shib qo'yamiz
 (elVideosList).appendChild(elVideosFragment);
 
+
 // RECOMMEND
-elRecommendVideo.forEach(function (recommend) {
+elRecommendVideo.forEach(function (recommend, index) {
   var elRecommendItem = elRecommendTemplate.cloneNode(true);
 
   $_(`.js-site-content__recommend-inner-img`, elRecommendItem).src = recommend.videoRecImage;
   $_(`.js-site-content__recommend-inner-time`, elRecommendItem).textContent = recommend.videoRecTime;
   $_(`.js-site-content__recommend-title`, elRecommendItem).textContent = recommend.videoRecTitle;
   $_(`.js-site-content__recommend-info-views`, elRecommendItem).textContent = recommend.videoRecViews;
+  $_(`.watch-later`, elRecommendItem).dataset.videoRecId = index;
 
   elRecommendFragment.appendChild(elRecommendItem);
 });
@@ -190,13 +210,14 @@ elRecommendVideo.forEach(function (recommend) {
 (elRecommendList).appendChild(elRecommendFragment);
 
 // OTHERVIDEOS
-elOtherVideos.forEach(function(other) {
+elOtherVideos.forEach(function(other, index) {
   var elOtherItem = elOtherTemplate.cloneNode(true);
 
   $_(`.js-site-content__other-img`, elOtherItem).src = other.otherVideoImage;
   $_(`.js-site-content__other-time`, elOtherItem).textContent = other.otherVideoTime;
   $_(`.js-site-content__other-title`, elOtherItem).textContent = other.otherVideoTitle;
   $_(`.js-site-content__other-views`, elOtherItem).textContent = other.otherVideoViews;
+  $_(`.watch-later`, elOtherItem).dataset.otherVideoId = index;
 
   elOtherFragment.appendChild(elOtherItem);
 });
@@ -204,4 +225,16 @@ elOtherVideos.forEach(function(other) {
 (elOtherList).appendChild(elOtherFragment);
 
 
+
+// WATCH LATER
+  elVideosList.addEventListener(`click`, function(evt) {
+    if(evt.target.matches(`.watch-later`)) {
+      elVideos.forEach(function(video, index) {
+        if(video.videoId === evt.target.dataset.videoId) {
+          console.log(evt.target.dataset.id);
+          elWatchLater.push(video);
+        }
+      });
+    };
+  });
 
