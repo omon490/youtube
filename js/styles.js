@@ -227,14 +227,14 @@ elOtherVideos.forEach(function(other, index) {
 
 
 // WATCH LATER
-  elVideosList.addEventListener(`click`, function(evt) {
-    if(evt.target.matches(`.watch-later`)) {
-      elVideos.forEach(function(video, index) {
-        if(video.videoId === evt.target.dataset.videoId) {
-          console.log(evt.target.dataset.id);
-          elWatchLater.push(video);
-        }
-      });
-    };
-  });
+  // elVideosList.addEventListener(`click`, function(evt) {
+  //   if(evt.target.matches(`.watch-later`)) {
+  //     elVideos.forEach(function(video, index) {
+  //       if(video.id === evt.target.dataset.videoId) {
+  //         console.log(evt.target.dataset.videoId);
+  //         elWatchLater.push(video);
+  //       }
+  //     });
+  //   };
+  // });
 
