@@ -186,7 +186,7 @@ var elOtherFragment = document.createDocumentFragment();
   $_(`.js-site-content__inner-time`, elVideosItem).textContent = video.videoTime;
   $_(`.js-site-content__videos-title`, elVideosItem).textContent = video.videoTitle;
   $_(`.js-site-content__info-views`, elVideosItem).textContent = video.videoViews;
-  $_(`.watch-later`, elVideosItem).dataset.videoId = index;
+  $_(`.watch-later`, elVideosItem).dataset.dataId = elVideos.videoId;
   // yuqoridagi fragmentga shu original qolipning nusxasini bolalari sifatida qo'shib qo'yamiz
   elVideosFragment.appendChild(elVideosItem);
 });
@@ -226,15 +226,17 @@ elOtherVideos.forEach(function(other, index) {
 
 
 
+
+
 // WATCH LATER
-  // elVideosList.addEventListener(`click`, function(evt) {
-  //   if(evt.target.matches(`.watch-later`)) {
-  //     elVideos.forEach(function(video, index) {
-  //       if(video.id === evt.target.dataset.videoId) {
-  //         console.log(evt.target.dataset.videoId);
-  //         elWatchLater.push(video);
-  //       }
-  //     });
-  //   };
-  // });
+  elVideosList.addEventListener(`click`, function(evt) {
+    if(evt.target.matches(`.watch-later`)) {
+      elVideos.forEach(function(video) {
+        if(video.videoId === evt.target.dataset.videoId) {
+          console.log(`ihsl;asdf`);
+          // elWatchLater.push(video);
+        }
+      });
+    };
+});
 
