@@ -8,9 +8,10 @@
   border: none;
   display: block;
   background-color: transparent;
-  background-image: url("../../img/clock-icon.svg");
+  background-image: url("../img/clock-icon.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
   opacity: 0;
+  cursor: pointer;
 }

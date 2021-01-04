@@ -1282,6 +1282,7 @@ img {
   padding: 10px 20px;
   background-color: #FF0000;
   color: #fff;
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 660px) {
@@ -1350,11 +1351,12 @@ img {
   border: none;
   display: block;
   background-color: transparent;
-  background-image: url("../../img/clock-icon.svg");
+  background-image: url("../img/clock-icon.svg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
   opacity: 0;
+  cursor: pointer;
 }
 
 .site-footer__list {

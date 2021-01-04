@@ -261,6 +261,7 @@
   padding: 10px 20px;
   background-color: $hover-color;
   color: $white;
+  cursor: pointer;
 }
 
 @include breakpoint-down (660) {
