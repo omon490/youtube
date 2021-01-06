@@ -64,18 +64,20 @@
 }
 
 .site-content__videos-item {
+  position: relative;
+  z-index: 1;
   width: 250px;
   margin-right: 40px;
   flex-shrink: 0;
+
+  &:hover .watch-later{
+    opacity: 1;
+  }
 }
 
 .site-content__videos-link {
   display: inline-block;
   width: 100%;
-
-  &:hover .watch-later{
-    opacity: 1;
-  }
 }
 
 .site-content__inner-box {
@@ -151,18 +153,20 @@
 }
 
 .site-content__recommend-item {
+  position: relative;
+  z-index: 1;
   margin-right: 40px;
   flex-shrink: 0;
   width: 540px;
+
+  &:hover .watch-later{
+    opacity: 1;
+  }
 }
 
 .site-content__recommend-link {
   width: 100%;
   display: inline-block;
-
-  &:hover .watch-later{
-    opacity: 1;
-  }
 }
 
 .site-content__recommend-inner-box {
